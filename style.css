@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+*{
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+    width: 100%;
+
+}
+body{
+    height: 100%;
+    width: 100%;
+    background-color:skyblue !important; 
+    font-family: 'Amatic SC', cursive !important;
+
+}
+.header{
+    text-align: center;
+}
+h1{
+    text-align: center;
+    padding: 40px 0;
+    font-size: 70px !important;
+}
+.startButton{
+    font-size: 30px;
+}
+.score{
+    padding: 5px 30px;
+    background: grey;
+    border-radius: 5px;
+    border: black solid thin;
+    color: red;
+}
+.game{
+    padding-top: 25px;
+    cursor: url(img/clawhammer.png), pointer;
+}
+.row{
+    padding-top: 50px;
+}
+
+.col {
+    padding-top: 200px;
+    position: relative;
+    display: inline;
+    min-height: 400px;
+    
+}
+.field{
+    background: url(img/field.png) bottom center no-repeat;
+    background-size: contain;
+    min-width: 100%;
+ height: 200px;
+  position: absolute;
+ 
+  bottom: -30px;
+  
+}
+.mrbump {
+    background: url(img/mrbump.png) bottom center no-repeat;
+    position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  transition:all 0.4s;
+   z-index: -1; 
+  background-size: 40%;
+   visibility: hidden; 
+
+
+
+}
+.up .mrbump{
+     top: -60%;
+    visibility: visible; 
+    z-index: 2;
+}
+@keyframes rise {
+    0%{visibility: visible;}
+    100%{top: -60%}
+}
